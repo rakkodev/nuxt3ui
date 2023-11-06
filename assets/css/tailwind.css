@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+/* base untuk reset / set default style dari element html.
+contoh: h1 h2 atau bisa p (element html) */
+}
+@layer components{
+/* ditujukan untuk style berbasis kelas yang ingin Anda
+timpa dengan utilitas.
+ex: card, btn, badge
+*/
+    .link{
+        @apply opacity-100 hover:opacity-80 transition duration-150
+    }
+}
+@layer utilities{
+/* kelas kecil dengan tujuan tunggal
+yang harus selalu diutamakan dibandingkan style lainnya. */
+    .container{
+        @apply max-w-[1080px] mx-auto px-[15px]
+    }
+}
